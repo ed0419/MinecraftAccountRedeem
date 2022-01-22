@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>監控台 - FM看門狗</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!-- integrity check (integrity="[hash]-[value]") -->
+<link rel="icon" href="static/favicon.ico">
+<meta http-equiv="refresh" content="180">
+
+<style type="text/css">
+    main {
+        margin-top: 1rem;
+    }
+
+    .schlussel code {
+        filter: blur(5px);
+    }
+
+    .schlussel:hover code {
+        filter: none;
+    }
+</style>
+</head>
+<body>
+<!-- 選單 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <a class="navbar-brand" href="/">FiveM 看門狗</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">
+                            監控台
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/new">
+                            新增主機
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/delete">
+                            刪除主機
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">
+                            登出
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+<!-- top -->
+<main class="section">
+  <div class="container">  
+    <p>歡迎, <strong>{{uid}}</strong>!</p>
+    <p>您目前擁有 <strong>{{host_count}}</strong> 台主機. 有 <strong>{{faild_count}}</strong> 台主機離線</p>
+    <!-- 主機資料 -->
+    <h3 class="h5 mb-3 font-weight-normal">運作中的主機</h3>
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th>No.</th>
+          <th>IP</th>
+          <th>主機名稱</th>
+          <th>RP名稱</th>
+          <th>人數</th>
+          <th>平均延遲</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{html|safe}}
+      </tbody>
+    </table>
+    {{offlineMsg|safe}}
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        {{faild_html|safe}}
+      </tbody>
+    </table>
+  </div>
+</main>
+
+</body>
+</html>
