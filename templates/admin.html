@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>監控台 - FM看門狗</title>
+  <title>Minecraft更換帳號 - 中部電資寒訓</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <!-- integrity check (integrity="[hash]-[value]") -->
 <link rel="icon" href="static/favicon.ico">
@@ -25,7 +25,7 @@
 <!-- 選單 -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation" aria-label="main navigation">
         <div class="container">
-            <a class="navbar-brand" href="/">FiveM 看門狗</a>
+            <a class="navbar-brand" href="/">Minecraft更換帳號 - 2022中部電資寒訓</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -35,17 +35,7 @@
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="/">
-                            監控台
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/new">
-                            新增主機
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/delete">
-                            刪除主機
+                            帳號資訊
                         </a>
                     </li>
                     <li class="nav-item">
@@ -60,28 +50,23 @@
 <main class="section">
   <div class="container">  
     <p>歡迎, <strong>{{uid}}</strong>!</p>
-    <p>您目前擁有 <strong>{{host_count}}</strong> 台主機. 有 <strong>{{faild_count}}</strong> 台主機離線</p>
-    <!-- 主機資料 -->
-    <h3 class="h5 mb-3 font-weight-normal">運作中的主機</h3>
+    <p>已為您標記 <strong>{{uid}}</strong> 無法使用.</p>
+    <p>若需要更多協助，請聯絡帳號負責人 教學組 - 蔡語宸 Discord edstudio_2#5253</p>
+    <!-- ACC -->
+    <h3 class="h5 mb-3 font-weight-normal">可供替換的帳號</h3>
     <table class="table table-striped">
       <thead class="thead-dark">
         <tr>
-          <th>No.</th>
-          <th>IP</th>
-          <th>主機名稱</th>
-          <th>RP名稱</th>
-          <th>人數</th>
-          <th>平均延遲</th>
+          <th>帳號</th>
+          <th>密碼</th>
         </tr>
       </thead>
       <tbody>
         {{html|safe}}
       </tbody>
     </table>
-    {{offlineMsg|safe}}
     <table class="table table-striped">
       <thead class="thead-dark">
-        {{faild_html|safe}}
       </tbody>
     </table>
   </div>

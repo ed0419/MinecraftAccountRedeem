@@ -6,7 +6,7 @@
       <meta name="description" content="">
       <meta name="author" content="">
       <link rel="icon" href="static/favicon.ico">
-      <title>登入控台 - FM看門狗</title>
+      <title>Minecraft更換帳號 - 中部電資寒訓</title>
       <!-- Bootstrap core CSS -->
       <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
   
@@ -17,11 +17,12 @@
     <body class="text-center">
       <form class="form-signin" action="/login" method="POST">
         <img class="mb-4" src="./static/LOGO1024BkDC_ni.svg" alt="" width="128" height="128">
-        <h1 class="h3 mb-3 font-weight-normal">FiveM RP 看門狗</h1>
+        <h1 class="h3 mb-3 font-weight-normal">Minecraft更換帳號</h1>
+        <p>請輸入您無法登入的帳號密碼以更換一組</p>
         <label for="inputUser" class="sr-only">帳號</label>
-        <input id="inputUser" type="text" name="uid" class="form-control" placeholder="User" required autofocus>
+        <input id="inputUser" type="text" name="uid" class="form-control" placeholder="壞掉的MC EMAIL" required autofocus>
         <label for="inputPassword" class="sr-only">密碼</label>
-        <input type="password" id="inputPassword" name="upass" class="form-control" placeholder="Password" required>
+        <input type="password" id="inputPassword" name="upass" class="form-control" placeholder="壞掉的MC 密碼" required>
         <button class="btn btn-lg btn-primary btn-block" type="submit">登入</button>
         <br>
         <font color = "red"><h3 class="h5 mb-3 font-weight-normal">{{errorMsg}}</h3></font>
