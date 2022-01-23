@@ -24,7 +24,7 @@ def main():
 def make_session_permanent():
     session.permanent = True
     app.permanent_session_lifetime = timedelta(minutes=5)
-
+    
 #登入介面 and session
 @app.route('/login',methods=["POST","GET"])
 def login():
@@ -46,8 +46,8 @@ def login():
         try:
             cursor.execute("SELECT password from MC_OLD where email=%(uid)s",{'uid':uid})
             password = cursor.fetchone()
-            print(password)
-            if upass == password:
+            print(password[0])
+            if upass == password[0]:
                 session['login'] = 1
                 session['login_uid'] = uid
                 return redirect("admin")
