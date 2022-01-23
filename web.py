@@ -1,7 +1,7 @@
 from os import stat
 from unittest import result
 from flask import Flask, request,  render_template, redirect, session, url_for
-import re, pymysql, json, requests
+import re, pymysql, json, requests,time
 from datetime import timedelta
 from flask_cors import CORS
 app = Flask(__name__,static_folder='static/')
@@ -47,6 +47,7 @@ def login():
             cursor.execute("SELECT password from MC_OLD where email=%(uid)s",{'uid':uid})
             password = cursor.fetchone()
             print(password[0])
+            time.sleep(0.1)
             if upass == password[0]:
                 session['login'] = 1
                 session['login_uid'] = uid
