@@ -123,4 +123,4 @@ def logout():
     return redirect("login")
 
 if __name__ == "__main__":
-    app.run(host = "0.0.0.0", port=8081, debug=True ,ssl_context=('server.crt', 'server.key',))
+    app.run(host = "0.0.0.0", port=30010, debug=True ,ssl_context=('server.crt', 'server.key',))
