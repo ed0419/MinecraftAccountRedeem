@@ -1,3 +1,5 @@
 *.acc
 *.key
 *.crt
+*.xlsx
+*.csv
